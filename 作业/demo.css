@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #0ea5e9;
+  text-decoration: none;
+}
+
+html {
+  font-size: 14px;
+  color: #333;
+  /* 字间距 */
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* 整体容器 */
+.container {
+  width: 800px;
+  padding: 50px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin: 50px auto;
+  border-radius: 20px;
+  position: relative;
+  background: #fff;
+}
+
+/* 背景 */
+.container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  background: linear-gradient(to right, #22d3ee, #0ea5e9);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  transform: rotate(-5deg);
+}
+
+/* 简历介绍模块 */
+.info-container {
+  /* 弹性盒布局 */
+  display: flex;
+  margin: 20px 0 40px 0;
+}
+/* 简历 */
+.info {
+  /* 网格布局 */
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-columns: 20px 280px 70px 1fr;
+  column-gap: 20px;
+}
+
+.info .name {
+  grid-area: 1/1/1/5;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.info .name span {
+  font-size: 14px;
+}
+.info .label {
+  text-align: right;
+  color: #888;
+}
+/* 简历照片 */
+.info-container img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* 其他模块公用样式 */
+.block-container {
+  margin-bottom: 50px;
+  /* outline: 1px solid red; */
+}
+
+.block-container .title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.block-container .title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  margin: 20px 0;
+}
+
+.block-container .block {
+  padding: 20px 20px 1px 20px;
+  /* outline: 1px solid blue; */
+  position: relative;
+}
+
+.block-container .block::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 2px;
+  background: #22d3ee;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 模块内容样式 */
+.block .label {
+  color: #888;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.block .label span {
+  color: #333;
+}
+
+.block .label::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #228fee;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: -28px;
+}
+
+.block .label p {
+  margin-top: 10px;
+}
+
+/* 专业技能模块 */
+.block-container .circle {
+  width: 140px;
+  height: 140px;
+  border: 6px solid #228fee;
+  border-radius: 50%;
+  line-height: 140px;
+  text-align: center;
+  color: #0ea5e9;
+  background: #f0fdff;
+}
+
+.circle-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: start center;
+  row-gap: 30px;
+}
+
+.circle-container .circle:nth-child(3) {
+  /* border-color: pink; */
+  border-bottom-color: #d3f7fc;
+  border-left-color: #d3f7fc;
+  transform: rotate(45deg);
+}
+.circle-container .circle:nth-child(3) span,
+.circle-container .circle:nth-child(4) span,
+.circle-container .circle:nth-child(5) span {
+  display: block;
+  transform: rotate(-45deg);
+}
+
+.circle-container .circle:nth-child(4) {
+  border-color: #0ea5e9 #d3f7fc #d3f7fc #d3f7fc;
+  transform: rotate(45deg);
+}
+
+.circle-container .circle:nth-child(5) {
+  border-color: #0ea5e9 #0ea5e9 #0ea5e9 #d3f7fc;
+  transform: rotate(45deg);
+}
+
+/* 项目经验模块样式 */
+
+.system {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  column-gap: 20px;
+  row-gap: 10px;
+  line-height: 1.7;
+}
+
+.system .name {
+  font-size: 1.2em;
+  font-weight: bold;
+  grid-area: 1/1/2/3;
+  margin-bottom: 20px;
+}
+
+.system .label {
+  text-align: right;
+  color: #888;
+}
+
+.system .desc2 {
+  grid-area: 6/2/7/3;
+}
+.system .desc3 {
+  grid-area: 7/2/8/3;
+}
+
+.system .bold {
+  font-weight: bold;
+}
+
+/* 个人评价模块样式 */
+.desc-people {
+  font-size: 1.5em;
+  line-height: 1.7;
+}

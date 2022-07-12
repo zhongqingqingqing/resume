@@ -1,0 +1,37 @@
+{
+  "id": "3447060",
+  "name": "常用图标",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "常用图标",
+  "glyphs": [
+    {
+      "icon_id": "1235222",
+      "name": "网址",
+      "font_class": "wangzhi",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "4552970",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e908",
+      "unicode_decimal": 59656
+    },
+    {
+      "icon_id": "7567773",
+      "name": "24gl-phoneLoudspeaker",
+      "font_class": "24gl-phoneLoudspeaker",
+      "unicode": "e94f",
+      "unicode_decimal": 59727
+    },
+    {
+      "icon_id": "4899570",
+      "name": "爪子",
+      "font_class": "zhaozi",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    }
+  ]
+}
